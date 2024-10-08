@@ -13,6 +13,8 @@ import { UsersPage } from './pages/UsersPage';
 import { Loader } from './components/Loader.jsx';
 import { HomePage } from './pages/HomePage.jsx';
 import { usePageError } from './hooks/usePageError.js';
+import { RequestPasswordResetPage } from './pages/RequestPasswordResetPage.jsx';
+import { PasswordResetPage } from './pages/PasswordResetPage.jsx';
 
 function App() {
   const navigate = useNavigate();
@@ -92,13 +94,21 @@ function App() {
             path="login"
             element={<LoginPage />}
           />
+          <Route
+            path="request-password-reset"
+            element={<RequestPasswordResetPage />}
+          />
+          <Route
+            path="reset-password"
+            element={<PasswordResetPage />}
+          />
 
-          {/* <Route path="/" element={<RequireAuth />}> */}
+          <Route path="/" element={<RequireAuth />}>
             <Route
               path="users"
               element={<UsersPage />}
             />
-          {/* </Route> */}
+          </Route>
         </Routes>
       </section>
 

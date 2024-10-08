@@ -22,7 +22,7 @@ function validatePassword(value) {
   if (!value) {
     return 'Password is required';
   }
-    
+
   if (value.length < 6) {
     return 'At least 6 characters';
   }
@@ -121,6 +121,10 @@ export const LoginPage = () => {
               ) : (
                 <p className="help">At least 6 characters</p>
               )}
+            </div>
+
+            <div className="field">
+              <Link to="/request-password-reset">Forgot password?</Link>
             </div>
 
             <div className="field">
